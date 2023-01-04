@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAEGIS PORTFOLIO</title>
+</head>
+
+<style type="text/css">
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.h1{
+    color: #f8b043;
+}
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+
+
+}
+
+#slideImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom-out 6s linear infinite;
+}
+
+@keyframes zoom-out {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.01);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.774),rgba(0, 0, 0, 0.788));
+    position: absolute;
+    top: 0;
+
+}
+
+.navbar{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin: 35px auto;
+
+}
+
+.logo {
+    flex-basis: 15%
+}
+
+.logo img{
+    width: 120px;
+    cursor: pointer;
+}
+
+
+.menu-icons{
+    flex: 1;
+    align-items: center;
+    text-align: right;
+}
+
+.menu-icons img{
+    width: 20px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.content{
+    width: 60%;
+    margin: 160px auto 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top:0;
+}
+
+.content h1 {
+    font-size: 60px;
+
+}
+.content h3{
+    width: 80%;
+    margin: 20px auto 100px;
+    font-weight: 100;
+    line-height:25px;
+
+}
+
+button {
+    width: 100px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid #ffffff;
+    
+    color: #fff;
+    transition: background 0.5s;
+}
+
+button:hover{
+    border: 2px solid #fea450;
+    background: #f8b043;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+table {
+  background: #00000062;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+th {
+  border-bottom: 1px solid #364043;
+  color: #E2B842;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+td {
+  color: #fff;
+  font-weight: 400;
+  padding: 0.65em 1em;
+}
+.disabled td {
+  color: #4F5F64;
+}
+tbody tr {
+  transition: background 0.25s ease;
+}
+tbody tr:hover {
+  background: #b6a71f;
+}
+
+.content h2{
+    width: 60%;
+    margin: 160px auto 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: 0;
+}
+
+
+
+</style>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src = "img1.jpg" id="slideImg">
+        </div>
+
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <img src = "logo.png">
+                </div>
+                <div class="menu-icons">
+                    <a href="index.html"> <img src = "home.png"> </a>
+                    <a href="page1.html"> <img src = "next.png"> </a>
+                    <a href="artist.html"> <img src = "artist.png"> </a>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h1> ABOUT <span class="h1"> <i>THE ARTIST</i></span> </h1>
+          
+                <h3> 
+                    I go by the name <b><u>'Naegis'</u></b> when I do art. 
+                    I started to try digital art in the middle of 2021, when I started SHS<br>
+                    I bought a pen tablet for fun and things just escalated from there. 
+                    I like to do fan arts but drawing portraits of people also interest me. <br>
+                    If you're interested in commissioning me, hmu <i>@nnaegis</i> on Instagram!
+
+                </h3>
+                
+                <h2> Comission Table</h2>
+                <table>
+                <thead>
+                  <tr>
+                    <th>TYPE</th>
+                    <th>LEVEL OF DETAIL</th>
+                    <th>QTY</th>
+                    <th>PAYMENT</th>
+                    <th>PRICE</th>
+                </thead>
+                <tbody>
+                  <tr>
+                      <td>Full-Body</td>
+                      <td>Fully-Rendered</td>
+                      <td>1</td>
+                      <td>GCash/PayPal</td>
+                      <td>$50</td>
+              
+              
+                  <tr>
+                      <td>Half-Body</td>
+                      <td>Semi-Rendered</td>
+                      <td>1</td>
+                      <td>GCash/PayPal</td>
+                      <td>$30</td>
+              
+              
+                  <tr>
+                      <td>Face</td>
+                      <td>Flat Color</td>
+                      <td>1</td>
+                      <td>GCash/PayPal</td>
+                      <td>$15</td>
+              
+                  <tr>
+                      <td>Half-Body</th>
+                      <td>Fully-Rendered</td>
+                      <td>1</td>
+                      <td>GCash/PayPal</td>
+                      <td>$40</td>
+              
+                  <tr>
+                      <td>Face</td>
+                      <td>Semi-Rendered</td>
+                      <td>1</td>
+                      <td>GCash/PayPal</td>
+                      <td>$28</td>
+              
+                  <tr>
+                      <td>Half-Body</td>
+                      <td>Flat Color</td>
+                      <td>1</td>
+                      <td>GCash/PayPal</td>
+                      <td>$25</td>
+              
+                  <tr>
+                      <td>Face</td>
+                      <td>Fully-Rendered</td>
+                      <td>1</td>
+                      <td>GCash/PayPal</td>
+                      <td>$35</td>
+              
+                </tbody>
+              </table>
+              
+            </div>
+            
+            
+            </div>
+            
+        </div>
+    </div>
+
+    
+    
+
+    <script>
+        var slideImg = document.getElementById("slideImg");
+        var images = new Array(
+            "img1.jpg",
+            "img7.png",
+            "zhongli.png",
+            "img17.png",
+            "img6.png",
+            "img16.png",
+            "img5.png"
+
+        );
+
+        var len = images.length;
+        var i = 0;
+
+        function slider(){
+         if(i > len-1){
+            i = 0;
+        }
+
+        slideImg.src = images[i];
+        i++;
+        setTimeout('slider()',3000);
+    }
+
+    </script>
+
+</body>
+</html>
