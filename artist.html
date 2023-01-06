@@ -30,7 +30,7 @@
 .slider {
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
 
 
@@ -63,10 +63,18 @@
 .overlay{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.774),rgba(0, 0, 0, 0.788));
-    position: absolute;
+    position: relative;
+    overflow: auto;
     top: 0;
 
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.774),rgba(0, 0, 0, 0.788));
+    position: fixed;
+    top: 0;
 }
 
 .navbar{
@@ -104,7 +112,10 @@
     margin: 160px auto 0;
     text-align: center;
     color: #fff;
-    position: relative;
+    position: sticky;
+    overflow: visible;
+    background-position: center;
+    background-size: cover;
     top:0;
 }
 
@@ -179,9 +190,6 @@ td {
   color: #fff;
   font-weight: 400;
   padding: 0.65em 1em;
-}
-.disabled td {
-  color: #4F5F64;
 }
 tbody tr {
   transition: background 0.25s ease;
@@ -756,7 +764,107 @@ tbody tr:hover {
     }
 }
 
+@media screen and (max-width: 600px) and (min-width: 290px) {
 
+    .content{
+    width: 60%;
+    text-align: center;
+    color: #fff;
+    position: sticky;
+    overflow: visible;
+    background-position: center;
+    background-size: cover;
+    top:0;
+    margin-top: 20%;
+}
+
+.content h1 {
+    font-size: 200%;
+    margin: 10px auto 0;
+
+}
+.content h3{
+    width: 100%;
+    font-size: 100%;
+    margin: 40px auto 0;
+    font-weight: 100;
+    line-height:25px;
+    margin-bottom: 100px;
+
+}
+
+.content h2{
+    width: 80%;
+    font-size: 120%;
+    margin: 40px auto 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: 0;
+}
+
+table {
+width: 100%;
+  background: #00000062;
+  border-collapse: collapse;
+  margin-left: 0;
+
+}
+th {
+  border-bottom: 1px solid #364043;
+  color: #E2B842;
+  font-size: 60%;
+  font-weight: 600;
+  text-align: center;
+}
+td {
+  color: #fff;
+  font-size: 60%;
+  font-weight: 400;
+
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: auto;
+    top: 0;
+
+}
+
+.navbar{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin: 35px auto;
+
+}
+
+.logo {
+    flex-basis: 15%
+}
+
+.logo img{
+    width: 90px;
+    cursor: pointer;
+}
+
+
+.menu-icons{
+    flex: 1;
+    align-items: center;
+    text-align: right;
+}
+
+.menu-icons img{
+    width: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+}
 
 </style>
 <body onload="slider()">
@@ -769,6 +877,8 @@ tbody tr:hover {
         <div id="stars2"></div>
         <div id="stars3"></div>
 
+        <div class="bg"></div>
+
         <div class="overlay">
             <div class="navbar">
                 <div class="logo">
@@ -776,7 +886,6 @@ tbody tr:hover {
                 </div>
                 <div class="menu-icons">
                     <a href="index.html"> <img src = "home.png"> </a>
-                    <a href="page3.html"> <img src = "back.png"> </a>
                     <a href="artist.html"> <img src = "artist.png"> </a>
                 </div>
             </div>
@@ -793,7 +902,7 @@ tbody tr:hover {
 
                 </h3>
                 
-                <h2> Commission Table</h2>
+                <h2> Comission Table</h2> <br>
                 <table>
                 <thead>
                   <tr>
@@ -809,7 +918,7 @@ tbody tr:hover {
                       <td>Fully-Rendered</td>
                       <td>1</td>
                       <td>GCash/PayPal</td>
-                      <td>$40</td>
+                      <td>$50</td>
               
               
                   <tr>
@@ -817,7 +926,7 @@ tbody tr:hover {
                       <td>Semi-Rendered</td>
                       <td>1</td>
                       <td>GCash/PayPal</td>
-                      <td>$20</td>
+                      <td>$30</td>
               
               
                   <tr>
@@ -825,44 +934,46 @@ tbody tr:hover {
                       <td>Flat Color</td>
                       <td>1</td>
                       <td>GCash/PayPal</td>
-                      <td>$5</td>
+                      <td>$15</td>
               
                   <tr>
                       <td>Half-Body</th>
                       <td>Fully-Rendered</td>
                       <td>1</td>
                       <td>GCash/PayPal</td>
-                      <td>$30</td>
+                      <td>$40</td>
               
                   <tr>
                       <td>Face</td>
                       <td>Semi-Rendered</td>
                       <td>1</td>
                       <td>GCash/PayPal</td>
-                      <td>$15</td>
+                      <td>$28</td>
               
                   <tr>
                       <td>Half-Body</td>
                       <td>Flat Color</td>
                       <td>1</td>
                       <td>GCash/PayPal</td>
-                      <td>$10</td>
+                      <td>$25</td>
               
                   <tr>
                       <td>Face</td>
                       <td>Fully-Rendered</td>
                       <td>1</td>
                       <td>GCash/PayPal</td>
-                      <td>$25</td>
+                      <td>$35</td>
               
                 </tbody>
               </table>
-              
+              <br><br><br>
             </div>
-            
+
             </div>
             
         </div>
+
+        
     </div>
 
     
