@@ -244,6 +244,16 @@
 
             var currentIndex = 0;
 
+            function openFullImg(pic) {
+                fullImgBox.style.display = "flex";
+                fullImg.src = pic;
+            }
+
+            function closeFullImg() {
+                currentIndex = 0;
+                fullImgBox.style.display = "none";
+            }
+            
             function prev() {
                 currentIndex = (currentIndex - 1 + images.length) % images.length;
                 updateFullImg();
@@ -258,15 +268,7 @@
                 fullImg.src = images[currentIndex];
             }
 
-            function openFullImg(pic) {
-                fullImgBox.style.display = "flex";
-                fullImg.src = pic;
-            }
 
-            function closeFullImg() {
-                currentIndex = 0;
-                fullImgBox.style.display = "none";
-            }
 
             // Initially set the first image
             updateFullImg();
