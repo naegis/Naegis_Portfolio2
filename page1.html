@@ -204,7 +204,7 @@
 
         <div class="full-img" id="fullImgBox">
             <img src="img1.jpg" id="fullImg">
-            <button class="x" id="submit" onclick="closeFullImg()">X</button>
+            <button class="x" id="close" onclick="closeFullImg()">X</button>
             <span class="prev" onclick="prev()"> ◁ </span>
             <span class="next" onclick="next()"> ▷ </span>
         </div>
@@ -260,8 +260,15 @@
             var fullImg = document.getElementById("fullImg");
             var images = ['zhongli.png', 'img1.jpg', "img2.png", "img3.png", "reneee.png", "img4.png", "img5.png", "img6.png", "img7.png", "img8.png", "img9.png", "img14.png", "AKI.png", "img13.png", "img15.png", "img16.png", "img17.png", "colls.png", "img18.png", "img19.png", "img21.png", "img22.png", "img23.png", "img24.png", "img25.png", "img26.jpg", "img27.png", "img28.png", "img29.png", "img30.png", "img31.png", "scara.png", "img11.png", "img12.png"];
             var currentIndex = 0;
-            var closeButton = document.getElementById('submit');
+            // var closeButton = document.getElementById('submit');
 
+            // let buttonClicked = false;
+            // closeButton.addEventListener('click', function handleClick() {
+            //     if (buttonClicked) {
+            //         var currentIndex = 0;
+            //     }
+            //     buttonClicked = true;
+            // })
 
             function prev() {
                 currentIndex = (currentIndex - 1 + images.length) % images.length;
@@ -284,19 +291,13 @@
 
             function closeFullImg() {
                 fullImgBox.style.display = "none";
+                var currentIndex = 0;
             }
 
             // Initially set the first image
             updateFullImg();
 
-            let buttonClicked = false;
-            closeButton.addEventListener('click', function handleClick() {
 
-                if (buttonClicked) {
-                    var currentIndex = 0;
-                }
-                buttonClicked = true;
-            })
 
 
         </script>
