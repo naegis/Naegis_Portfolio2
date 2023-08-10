@@ -206,32 +206,32 @@
 
     <div class = "slider">
         <div class="img-gallery">
-            <img src="zhongli.png" onclick="openFullImg(this.src, 0)">
-            <img src="img1.jpg" onclick="openFullImg(this.src, 1)">
-            <img src="img3.png" onclick="openFullImg(this.src, 2)">
-            <img src="img5.png" onclick="openFullImg(this.src, 3)">
-            <img src="img6.png" onclick="openFullImg(this.src, 4)">
-            <img src="img7.png" onclick="openFullImg(this.src, 5)">
-            <img src="img8.png" onclick="openFullImg(this.src, 6)">
-            <img src="img9.png" onclick="openFullImg(this.src, 7)">
-            <img src="img14.png" onclick="openFullImg(this.src, 8)">
-            <img src="AKI.png" onclick="openFullImg(this.src, 9)">
-            <img src="img13.png" onclick="openFullImg(this.src, 10)">
-            <img src="img18.png" onclick="openFullImg(this.src, 11)">
-            <img src="img19.png" onclick="openFullImg(this.src, 12)">
-            <img src="img21.png" onclick="openFullImg(this.src, 13)">
-            <img src="img22.png" onclick="openFullImg(this.src, 14)">
-            <img src="img23.png" onclick="openFullImg(this.src, 15)">
-            <img src="img24.png" onclick="openFullImg(this.src, 16)">
-            <img src="img25.png" onclick="openFullImg(this.src, 17)">
-            <img src="img26.jpg" onclick="openFullImg(this.src, 18)">
-            <img src="img27.png" onclick="openFullImg(this.src, 19)">
-            <img src="img28.png" onclick="openFullImg(this.src, 20)">
-            <img src="img29.png" onclick="openFullImg(this.src, 21)">
-            <img src="img30.png" onclick="openFullImg(this.src, 22)">
-            <img src="img31.png" onclick="openFullImg(this.src, 23)">
-            <img src="scara.png" onclick="openFullImg(this.src, 24)">
-            <img src="img12.png" onclick="openFullImg(this.src, 25)">
+            <img src="zhongli.png" onclick="openFullImg(this.src)">
+            <img src="img1.jpg" onclick="openFullImg(this.src)">
+            <img src="img3.png" onclick="openFullImg(this.src)">
+            <img src="img5.png" onclick="openFullImg(this.src)">
+            <img src="img6.png" onclick="openFullImg(this.src)">
+            <img src="img7.png" onclick="openFullImg(this.src)">
+            <img src="img8.png" onclick="openFullImg(this.src)">
+            <img src="img9.png" onclick="openFullImg(this.src)">
+            <img src="img14.png" onclick="openFullImg(this.src)">
+            <img src="AKI.png" onclick="openFullImg(this.src)">
+            <img src="img13.png" onclick="openFullImg(this.src)">
+            <img src="img18.png" onclick="openFullImg(this.src)">
+            <img src="img19.png" onclick="openFullImg(this.src)">
+            <img src="img21.png" onclick="openFullImg(this.src)">
+            <img src="img22.png" onclick="openFullImg(this.src)">
+            <img src="img23.png" onclick="openFullImg(this.src)">
+            <img src="img24.png" onclick="openFullImg(this.src)">
+            <img src="img25.png" onclick="openFullImg(this.src)">
+            <img src="img26.jpg" onclick="openFullImg(this.src)">
+            <img src="img27.png" onclick="openFullImg(this.src)">
+            <img src="img28.png" onclick="openFullImg(this.src)">
+            <img src="img29.png" onclick="openFullImg(this.src)">
+            <img src="img30.png" onclick="openFullImg(this.src)">
+            <img src="img31.png" onclick="openFullImg(this.src)">
+            <img src="scara.png" onclick="openFullImg(this.src)">
+            <img src="img12.png" onclick="openFullImg(this.src)">
         </div>
     </div>
 
@@ -240,7 +240,7 @@
         <script>
             var fullImgBox = document.getElementById("fullImgBox");
             var fullImg = document.getElementById("fullImg");
-            var images = ['zhongli.png', "img1.jpg", "img3.png", "img5.png", "img6.png", "img7.png", "img8.png", "img9.png", "img14.png", "AKI.png", "img13.png", "img18.png", "img19.png", "img21.png", "img22.png", "img23.png", "img24.png", "img25.png", "img26.jpg", "img27.png", "img28.png", "img29.png", "img30.png", "img31.png", "scara.png", "img12.png"];
+            var images = [ 'zhongli.png', "img3.png", "img5.png", "img6.png", "img7.png", "img8.png", "img9.png", "img14.png", "AKI.png", "img13.png", "img18.png", "img19.png", "img21.png", "img22.png","img23.png","img24.png","img25.png","img27.png","img28.png","img29.png","img30.png","img31.png","scara.png","img12.png"];
 
             var currentIndex = 0;
 
@@ -258,10 +258,9 @@
                 fullImg.src = images[currentIndex];
             }
 
-            function openFullImg(pic, index) {
-                currentIndex = index;
+            function openFullImg(pic) {
                 fullImgBox.style.display = "flex";
-                updateFullImg();
+                fullImg.src = pic;
             }
 
             function closeFullImg() {
@@ -271,7 +270,6 @@
             // Initially set the first image
             updateFullImg();
         </script>
-
     </body>
 
 </html>
