@@ -200,6 +200,23 @@
         <script>
             var fullImgBox = document.getElementById("fullImgBox");
             var fullImg = document.getElementById("fullImg");
+            var images = [ 'zhongli.png', "img3.png", "img5.png", "img6.png", "img7.png", "img8.png", "img9.png", "img14.png", "AKI.png", "img13.png", "img18.png", "img19.png", "img21.png", "img22.png","img23.png","img24.png","img25.png","img27.png","img28.png","img29.png","img30.png","img31.png","scara.png","img12.png"];
+
+            var currentIndex = 0;
+
+            function prev() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateFullImg();
+            }
+
+            function next() {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateFullImg();
+            }
+
+            function updateFullImg() {
+                fullImg.src = images[currentIndex];
+            }
 
             function openFullImg(pic) {
                 fullImgBox.style.display = "flex";
@@ -209,6 +226,9 @@
             function closeFullImg() {
                 fullImgBox.style.display = "none";
             }
+
+            // Initially set the first image
+            updateFullImg();
         </script>
 
     </body>
