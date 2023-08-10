@@ -276,10 +276,11 @@
             }
 
             function closeFullImg() {
-                fullImgBox.style.display = "none";
                 var currentIndex = 0;
+                fullImgBox.style.display = "none";
+                updateFullImg();
             }
-            
+
             function prev() {
                 currentIndex = (currentIndex - 1 + images.length) % images.length;
                 updateFullImg();
