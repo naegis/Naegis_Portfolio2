@@ -266,6 +266,9 @@
                 fullImg.src = pic;
             }
 
+            function closeFullImg() {
+                fullImgBox.style.display = "none";
+            }
 
             function prev() {
                 currentIndex = (currentIndex - 1 + images.length) % images.length;
@@ -281,9 +284,7 @@
                 fullImg.src = images[currentIndex];
             }
 
-            function closeFullImg() {
-                fullImgBox.style.display = "none";
-            }
+
 
             // Initially set the first image
             updateFullImg();
