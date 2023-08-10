@@ -102,6 +102,28 @@
             cursor: pointer;
         }
 
+        .prev {
+            color:#ffffff;
+            margin: 10 px auto;
+            left: 5%;
+            position: absolute;
+            font-size: 30px;
+            color: #ffffff;
+            cursor: pointer;
+
+
+        }
+
+        .next {
+            color:#ffffff;
+            margin: 10 px auto;
+            right: 5%;
+            position: absolute;
+            font-size: 30px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
         h1 {
             padding: 3%;
             text-align: center;
@@ -118,17 +140,7 @@
             color: #353535;
         }
 
-        button {
-            border:none;
-            outline:none;
-            background:#888;
-            padding: 10px 30px;
-            font-size: 20px;
-            color: #ddd;
-            margin: 10 px auto;
-            
 
-        }
 
         @media screen and (max-width: 600px) and (min-width: 290px) {
 
@@ -187,10 +199,11 @@
         <div class="full-img" id="fullImgBox">
             <img src="img1.jpg" id="fullImg">
             <span onclick="closeFullImg()">X</span>
+            <button class="prev" onclick="prev()"> < </button>
+            <button class="next" onclick="next()"> > </button>
         </div>
 
 
-    <div class = "slider">
         <div class="img-gallery">
             <img src="zhongli.png" onclick="openFullImg(this.src)">
             <img src="img1.jpg" onclick="openFullImg(this.src)">
@@ -228,10 +241,6 @@
             <img src="img12.png" onclick="openFullImg(this.src)">
         </div>
 
-        <button class="button" onclick="prev()"> prev </button>
-        <button class="button" onclick="next()"> next </button>
-
-    </div>
 
         <section class="wrapper">
 
