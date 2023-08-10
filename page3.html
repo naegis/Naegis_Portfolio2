@@ -94,13 +94,39 @@
             max-width: 700px;
         }
 
-        .full-img span {
+        .x {
             position: absolute;
             top: 5%;
             right: 5%;
             font-size: 30px;
             color: #ffffff;
             cursor: pointer;
+            text-shadow: 2px 2px #1a160b;
+        }
+
+        .prev {
+            color:#ffffff;
+            margin: 10 px auto;
+            left: 2%;
+            position: absolute;
+            font-size:30px;
+            color: #ffffff;
+            cursor: pointer;
+            text-shadow: 2px 2px #1a160b;
+
+
+        }
+
+        .next {
+            color:#ffffff;
+            margin: 10 px auto;
+            right: 2%;
+            position: absolute;
+            font-size: 30px;
+            color: #ffffff;
+            cursor: pointer;
+            text-shadow: 2px 2px #1a160b;
+
         }
 
         h1 {
@@ -173,11 +199,13 @@
 
         <div class="full-img" id="fullImgBox">
             <img src="img1.jpg" id="fullImg">
-            <span onclick="closeFullImg()">X</span>
+            <span class="x" onclick="closeFullImg()">X</span>
+            <span class="prev" onclick="prev()"> ◁ </span>
+            <span class="next" onclick="next()"> ▷ </span>
         </div>
 
 
-
+    <div class = "slider">
         <div class="img-gallery">
             <img src="img2.png" onclick="openFullImg(this.src)">
             <img src="img4.png" onclick="openFullImg(this.src)">
@@ -194,13 +222,17 @@
             <img src="img11.png" onclick="openFullImg(this.src)">
             <img src="cha.png" onclick="openFullImg(this.src)">
         </div>
+    </div>
+
 
         <h3> instagram: @nnaegis </h3>
 
        <script>
             var fullImgBox = document.getElementById("fullImgBox");
             var fullImg = document.getElementById("fullImg");
-            var images = [ 'zhongli.png', "img3.png", "img5.png", "img6.png", "img7.png", "img8.png", "img9.png", "img14.png", "AKI.png", "img13.png", "img18.png", "img19.png", "img21.png", "img22.png","img23.png","img24.png","img25.png","img27.png","img28.png","img29.png","img30.png","img31.png","scara.png","img12.png"];
+            var images = [
+            "img2.png", "img4.png", "reneee.png", "colls.png", "img25.png", "img15.png", "img16.png", "img17.png", "jesus (1).png", "img18.png", "img13.png", "jesus (2).png", "img11.png", "cha.png"
+            ];
 
             var currentIndex = 0;
 
