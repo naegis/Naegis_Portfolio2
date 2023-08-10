@@ -118,6 +118,10 @@
             color: #353535;
         }
 
+        button {
+
+        }
+
         @media screen and (max-width: 600px) and (min-width: 290px) {
 
             .navbar {
@@ -175,13 +179,12 @@
         <div class="full-img" id="fullImgBox">
             <img src="img1.jpg" id="fullImg">
             <span onclick="closeFullImg()">X</span>
+            <span onclick="prev()"> Prev </span>
+            <span onclick="next()"> Next </span>
         </div>
 
-        <div>
-            <button class="button" onclick="prev()"> prev </button>
-            <button class="button" onclick="next()"> next </button>
-        </div>
 
+    <div class = "slider">
         <div class="img-gallery">
             <img src="zhongli.png" onclick="openFullImg(this.src)">
             <img src="img1.jpg" onclick="openFullImg(this.src)">
@@ -219,9 +222,10 @@
             <img src="img12.png" onclick="openFullImg(this.src)">
         </div>
 
+        <button class="button" onclick="prev()"> prev </button>
+        <button class="button" onclick="next()"> next </button>
 
-
-
+    </div>
 
         <section class="wrapper">
 
