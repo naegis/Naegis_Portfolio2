@@ -251,17 +251,20 @@
                 fullImg.src = images[currentIndex];
             }
 
-            function openFullImg(pic) {
+            function openFullImg(pic, index) {
+                currentIndex = index;
                 fullImgBox.style.display = "flex";
-                fullImg.src = pic;
+                updateFullImg();
             }
 
             function closeFullImg() {
                 fullImgBox.style.display = "none";
             }
 
+
             // Initially set the first image
             updateFullImg();
+
         </script>
 
     </body>
