@@ -263,8 +263,8 @@
             var currentIndex = 0;
 
             function openFullImg(pic, index) {
+                currentIndex = index;
                 fullImgBox.style.display = "flex";
-                fullImg.src = pic;
             }
 
             function closeFullImg() {
